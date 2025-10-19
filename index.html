@@ -1,22 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Navam Software Solutions</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NavamSS — Smarter Business Solutions</title>
+  <meta name="description" content="NavamSS offers ERP, Payment Gateway, and Automation Solutions to power digital transformation." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f8fafc;
-      text-align: center;
-      padding: 80px;
+    :root{
+      --primary:#5b21b6;
+      --secondary:#06b6d4;
+      --highlight:#facc15;
+      --bg1:#0f172a;
+      --bg2:#1e293b;
+      --text:#e2e8f0;
+      --muted:#94a3b8;
+      --radius:14px;
+      --shadow:0 8px 24px rgba(0,0,0,0.3);
+      font-family: 'Poppins', system-ui, sans-serif;
     }
-    h1 { color: #0078d4; }
+    body{margin:0;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text);} 
+    header{background:linear-gradient(90deg,var(--primary),var(--secondary));padding:18px 32px;display:flex;justify-content:space-between;align-items:center;color:#fff;box-shadow:var(--shadow);}
+    .logo{font-weight:800;font-size:22px;letter-spacing:0.5px;}
+    nav a{color:white;text-decoration:none;margin-left:24px;font-weight:600;transition:0.3s;}
+    nav a:hover{color:var(--highlight);}
+    .hero{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:60px 40px;gap:40px;}
+    .hero-text{flex:1;min-width:320px;}
+    .hero-text h1{font-size:44px;line-height:1.2;margin-bottom:16px;color:var(--highlight);}
+    .hero-text p{color:var(--muted);font-size:18px;margin-bottom:24px;}
+    .cta-btn{padding:12px 22px;border:none;border-radius:var(--radius);cursor:pointer;font-weight:700;background:linear-gradient(90deg,var(--secondary),var(--primary));color:#fff;box-shadow:var(--shadow);}
+    .cta-btn:hover{transform:scale(1.05);transition:0.3s;}
+    .card{background:rgba(255,255,255,0.05);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+    section{padding:60px 40px;}
+    h2{text-align:center;color:var(--highlight);font-size:32px;margin-bottom:30px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+    .grid .card h3{color:white;margin-bottom:8px;}
+    .grid .card p{color:var(--muted);}
+    footer{background:var(--bg1);padding:20px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.1);}
+    .contact-form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:12px;}
+    input,textarea{padding:10px;border-radius:var(--radius);border:none;background:rgba(255,255,255,0.1);color:#fff;}
+    input:focus,textarea:focus{outline:2px solid var(--secondary);}
+    .contact-btn{align-self:center;width:150px;}
   </style>
 </head>
 <body>
-  <h1>Welcome to Navam Software Solutions n Services 🌊</h1>
-  <p>Innovate smart solutions, solve multiple problems.</p>
-  <p>🚀 Built with GitHub Pages</p>
+  <header>
+    <div class="logo">NavamSS</div>
+    <nav>
+      <a href="#solutions">Solutions</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Innovative ERP & Payment Solutions</h1>
+      <p>Accelerate your business with NavamSS — a one-stop platform delivering smart ERP systems, seamless payment integration, and automation that grows with you.</p>
+      <button class="cta-btn" onclick="location.href='#contact'">Get Started</button>
+    </div>
+    <img src="https://cdn.jsdelivr.net/gh/krishna-ai-assets/navamss-banner.png" alt="Business Solutions" style="flex:1;max-width:480px;border-radius:20px;box-shadow:var(--shadow);">
+  </section>
+
+  <section id="solutions">
+    <h2>Our Solutions</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Enterprise ERP</h3>
+        <p>Digitize your operations with modular ERP covering finance, HR, procurement, and supply chain — customizable for small and large enterprises alike.</p>
+      </div>
+      <div class="card">
+        <h3>Payment Gateway Integration</h3>
+        <p>Process online payments securely and instantly. Our PayLink system supports cards, UPI, and wallets with advanced routing and analytics.</p>
+      </div>
+      <div class="card">
+        <h3>Automation Tools</h3>
+        <p>Streamline workflows, reduce manual intervention, and focus on what truly matters — growing your business.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>Products We Offer</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Navam ERP</h3>
+        <p>Scalable ERP platform that unifies your business data and enhances decision-making through insightful analytics.</p>
+      </div>
+      <div class="card">
+        <h3>PayLink Gateway</h3>
+        <p>A powerful payment orchestration layer that connects to multiple acquirers and simplifies payment workflows.</p>
+      </div>
+      <div class="card">
+        <h3>FlowOps Automation</h3>
+        <p>Automate tasks and notifications using rule-based logic — faster execution, fewer errors, and happier teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <form class="contact-form" onsubmit="event.preventDefault();alert('Thank you! We will reach out soon.');">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="How can we help you?" required></textarea>
+      <button class="cta-btn contact-btn">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    © <span id="year"></span> NavamSS | Empowering Digital Growth
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
